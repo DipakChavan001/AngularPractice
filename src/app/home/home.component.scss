@@ -4,3 +4,23 @@
 //         color:blue;
 //     }
 //  }
+img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 90vh;
+}
+.main-content{
+    position: absolute;
+    top:50%;
+    left:20%;
+    transform: translate(-50%,-50%);
+    h1{
+        color:white;
+        font-size: 3rem;
+    }
+}
+section.courses{
+    background-color: #d99a78;
+    padding: 6vh;
+}

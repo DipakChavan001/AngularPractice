@@ -72,3 +72,16 @@
     </form>
   </div>
 </div>
+
+<div class="row mt-3">
+    @for (Course of courses; track $index) {
+      <app-courses [course]="courses"></app-courses>
+    }@empty {
+      <div align="center">
+        No Courses added yet
+      </div>
+    
+    }
+
+    <!-- <app-courses *ngFor="let course of courses"></app-courses> -->
+</div>

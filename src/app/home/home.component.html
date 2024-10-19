@@ -7,3 +7,29 @@
    dynamic routing pasing 
     <a [routerLink]="['/','about',val]"> Goto About </a> 
 <a (click)="navigate()">Goto About</a>  --> 
+
+<section>
+  <img src="imgs/Banner.jpg">
+  <div class="main-content">
+    <h1 class="mt-2">Explore amazing content</h1>
+    <a class="btn btn-lg btn-light mt-2">Course</a>&nbsp;
+    <a class="btn btn-lg btn-primary mt-2">Templates</a>
+  </div>
+</section>
+<section class="courses">
+  <div class="container">
+    <h1 class="text-center">All Courses</h1>
+    <div class="row mt-5">
+      @for (Course of courses; track $index) {
+        <app-courses [course]="courses"></app-courses>
+      }
+      <!-- @empty {
+        <div align="center">
+          No Courses added yet
+        </div>
+      }
+       -->      
+    </div>
+  </div>
+  
+</section>
