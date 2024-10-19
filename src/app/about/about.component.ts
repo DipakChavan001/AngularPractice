@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 //import {ActivatedRoute } from '@angular/router';
 //import e from 'express';
 //import { validateHeaderName } from 'http';
