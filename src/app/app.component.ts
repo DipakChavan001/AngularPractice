@@ -9,5 +9,17 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'first-app';
+//  title=' testing projects';
+
+//  ngOnInit(): void {
+//   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+//   //Add 'implements OnInit' to the class.
+//   //this.changeTitle();
+//  }
+
+//  changeTitle(){
+//   this.title='Sample Project';
+//  }
+
+
 }
