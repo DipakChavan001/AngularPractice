@@ -12,18 +12,23 @@ export const routes: Routes = [
      {
         path:'',
         loadComponent:()=>
-             import('./home/home.component').then((c)=>c.HomeComponent),
+             import('./pages/home/home.component').then((c)=>c.HomeComponent),
      },
 
      {
         path:'about',
         loadComponent:()=>
-            import('./about/about.component').then((c)=>c.AboutComponent)
+            import('./pages/about/about.component').then((c)=>c.AboutComponent)
      },
      {
         path:'admin',
         loadComponent:()=>
-            import('./admin/admin.component').then((c)=>c.AdminComponent)
+            import('./pages/admin/admin.component').then((c)=>c.AdminComponent)
+     },
+     {
+        path:'courses',
+        loadComponent:()=>
+            import('./pages/courses/courses.component').then((c)=>c.CoursesComponent)
      }
 ];
 

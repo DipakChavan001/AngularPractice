@@ -19,17 +19,25 @@
 <section class="courses">
   <div class="container">
     <h1 class="text-center">All Courses</h1>
-    <div class="row mt-5">
-      @for (Course of courses; track $index) {
-        <app-courses [course]="courses"></app-courses>
+    
+    <!-- <div class="row mt-5">
+      @for (course of courses; track $index) {
+        <div class="col-lg-4 mb-2">
+          <app-courses [course]="course"></app-courses>
+        </div>
+        
       }
-      <!-- @empty {
+       @empty {
         <div align="center">
           No Courses added yet
         </div>
       }
-       -->      
-    </div>
+             
+    </div> -->
+
+    <!-- <app-courses [courses]="courses"></app-courses> -->
+     <app-courses></app-courses>
+     <app-about></app-about>
   </div>
   
-</section>
+</section> 

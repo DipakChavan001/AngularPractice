@@ -1,0 +1,87 @@
+<section class="Courses">
+<div class="card">
+  <div class="card-header">
+    Add Course
+  </div>
+  <div class="card-body">
+    <form #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
+      <div class="mb-3">
+        <label for="title" class="form-label">Titile</label>
+        <input type="text" class="form-control" placeholder="Enter title" id="title" name="title" #title="ngModel"
+          [(ngModel)]="model.title" required />
+        <!-- <div *ngIf="title.invalid && title.touched" class="text-danger">
+            Title is required.
+         </div> -->
+        @if(title.invalid && title.touched)
+        {
+        <div class="text-danger">Title is required.</div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label"> Description </label>
+        <textarea class="form-control" placeholder="Enter Description" rows="3" id="description" name="description"
+          #description="ngModel" [(ngModel)]="model.description" required></textarea>
+        @if(description.invalid && description.touched)
+        {
+        <div class="text-danger">Description is required.</div>
+        }
+      </div>
+      <div>
+        <label form="image">Choose an image:</label>
+        <input type="file" id="image" name="image" accept="image/*" multiple="false" (change)="onFileSelected($event)"
+          ngModel required>
+
+        @if(cover){
+        <div class="imageDiv" align="right">
+          <img [src]="cover" alt="" />
+        </div>
+        }
+        @if(showError){
+        <div class="text-danger">Image is required.</div>
+        }
+      </div>
+
+      <div class="mb-3" align="center">
+        <button type="submit" class="btn btn-primary ">Save</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+  <!-- <div class="container">
+    <h1 class="text-center">List Of Courses</h1>
+    <app-courses [courses]="courses" 
+    [isAdmin]="true" (del)="deleteCourse($event)">
+  </app-courses>
+
+    </div> -->
+    <div class="container">
+      <h1 class="text-center">List Of Courses</h1>
+        <!-- <app-courses
+          [isAdmin]="true"
+          (del)="deleteCourse($event)">       
+        </app-courses> -->
+        <app-courses
+          [isAdmin]="true">       
+        </app-courses>
+      </div>
+</section>
+
+
+<!-- <div class="row mt-5">
+    @for (course of courses; track $index) {
+      <div class="col-lg-4 mb-4">
+        <app-courses [course]="course" [isDelete]="true" (del)="deleteCourse($event)"></app-courses>
+      </div>
+     
+    }@empty {
+      <div align="center">
+        No Courses added yet
+      </div>
+    
+    }
+
+     <app-courses *ngFor="let course of courses"></app-courses> 
+</div> -->
